@@ -20,5 +20,15 @@ int main(int argc, char const *argv[])
     scanf("%d", &n);
 
     struct producto compra[n];
-
-    
+ int opcion;
+    do
+    {
+        printf("\n1. Ingresar datos de los productos \n");
+        printf("2. Mostrar datos de los productos\n");
+        printf("3. Salir\n");
+        printf("Seleccione una opcion: ");
+        fflush(stdout);
+        scanf("%d", &opcion);
+        
+    } while (opcion != 3);
+}
