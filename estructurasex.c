@@ -85,5 +85,11 @@ int ingresarDatos(struct producto *compra)
 }
 int mostrarDatos(struct producto *compra)
 {
-    
+    printf("    %s", compra->codigo);
+    printf("    %s", compra->nombreProductoProducto);
+    printf("    %s", compra->descriProducto);
+    printf("    %.2f", compra->precioCompra);
+    printf("\n");
+
+    return 0;
 }   
