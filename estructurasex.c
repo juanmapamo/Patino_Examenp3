@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+// Definiendo las variables al empezar el codigo
 struct producto
 {
     int cantidad;
@@ -11,7 +11,7 @@ struct producto
 };
 int ingresarDatos(struct producto *compra);
 int mostrarDatos(struct producto *compra);
-
+// Pidiendo al usuario que cantidad de productos se van a comprar
 int main(int argc, char const *argv[])
 {
     int n;
@@ -20,6 +20,7 @@ int main(int argc, char const *argv[])
     scanf("%d", &n);
 
     struct producto compra[n];
+    //Pidiendo al usuario que opciones tiene para ingresr los productos o si ya desea verlos, para eso vamos a utilizr un switch case
  int opcion;
     do
     {
@@ -53,10 +54,12 @@ int main(int argc, char const *argv[])
             printf("Opción no válida. Inténtelo de nuevo.\n");
             break;
         }
+        //Hemos definido como queremos que el usuario elija las opciones correctas, sino elije una de las tres opciones, tendra que intentarlo de nuevo
     } while (opcion != 3);
 }
 int ingresarDatos(struct producto *compra)
 {
+    //Vamos a configurar el ingreso de datos, los datos que vamos a pedir son el codigo, nombre, descripcion, precio
     char buffer[100];
 
     printf("Codigo del producto: ");
@@ -83,6 +86,7 @@ int ingresarDatos(struct producto *compra)
     scanf("%f", &(compra->precioCompra));
     return 0;
 }
+//En este int vamos a mostrar los datos, uno seguido del otro, y si son mas productos, uno abajo del otro
 int mostrarDatos(struct producto *compra)
 {
     printf("    %s", compra->codigo);
