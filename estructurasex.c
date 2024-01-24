@@ -30,5 +30,28 @@ int main(int argc, char const *argv[])
         fflush(stdout);
         scanf("%d", &opcion);
         
+        switch (opcion)
+        {
+        case 1:
+            for (int i = 0; i < n; i++)
+            {
+                printf("\nIngrese los datos del producto %d:\n", i + 1);
+                ingresarDatos(&compra[i]);
+            }
+            break;
+        case 2:
+            printf("\nDatos de los productos:\n");
+            for (int i = 0; i < n; i++)
+            {
+                mostrarDatos(&compra[i]);
+            }
+            break;
+        case 3:
+            printf("Saliendo del programa.\n");
+            break;
+        default:
+            printf("Opción no válida. Inténtelo de nuevo.\n");
+            break;
+        }
     } while (opcion != 3);
 }
