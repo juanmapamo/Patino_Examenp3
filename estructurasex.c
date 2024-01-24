@@ -83,3 +83,7 @@ int ingresarDatos(struct producto *compra)
     scanf("%f", &(compra->precioCompra));
     return 0;
 }
+int mostrarDatos(struct producto *compra)
+{
+    
+}   
