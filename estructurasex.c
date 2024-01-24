@@ -55,3 +55,7 @@ int main(int argc, char const *argv[])
         }
     } while (opcion != 3);
 }
+int ingresarDatos(struct producto *compra)
+{
+    
+}
