@@ -57,5 +57,19 @@ int main(int argc, char const *argv[])
 }
 int ingresarDatos(struct producto *compra)
 {
-    
+    char buffer[100];
+
+    printf("Codigo del producto: ");
+    fflush(stdout);
+    getchar();
+    fgets(buffer, sizeof(buffer), stdin);
+    buffer[strcspn(buffer, "\n")] = '\0';
+    strncpy(compra->codigo, buffer, sizeof(compra->codigo));
+
+    printf("Nombre del producto: ");
+    fflush(stdout);
+    fgets(buffer, sizeof(buffer), stdin);
+    buffer[strcspn(buffer, "\n")] = '\0';
+    strncpy(compra->nombreProductoProducto, buffer, sizeof(compra->nombreProductoProducto));
+
 }
